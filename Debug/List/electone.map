@@ -1,0 +1,468 @@
+###############################################################################
+#
+# IAR ELF Linker V3.10.1.201 for STM8                     22/May/2019  18:55:27
+# Copyright 2010-2017 IAR Systems AB.
+#
+#    Output file  =  F:\STM8\electron\electoneProject\Debug\Exe\electone.out
+#    Map file     =  F:\STM8\electron\electoneProject\Debug\List\electone.map
+#    Command line =  
+#        -f C:\Users\fish\AppData\Local\Temp\EW540D.tmp
+#        (F:\STM8\electron\electoneProject\Debug\Obj\delay.o
+#        F:\STM8\electron\electoneProject\Debug\Obj\disp.o
+#        F:\STM8\electron\electoneProject\Debug\Obj\global.o
+#        F:\STM8\electron\electoneProject\Debug\Obj\interrupt.o
+#        F:\STM8\electron\electoneProject\Debug\Obj\keys.o
+#        F:\STM8\electron\electoneProject\Debug\Obj\main.o
+#        F:\STM8\electron\electoneProject\Debug\Obj\oled.o
+#        F:\STM8\electron\electoneProject\Debug\Obj\tim2.o
+#        F:\STM8\electron\electoneProject\Debug\Obj\tone.o --redirect
+#        _Printf=_PrintfSmall --redirect _Scanf=_ScanfSmall -o
+#        F:\STM8\electron\electoneProject\Debug\Exe\electone.out --map
+#        F:\STM8\electron\electoneProject\Debug\List\electone.map --config
+#        G:\IAR_stm8\stm8\config\lnkstm8s105c6.icf --config_def
+#        _CSTACK_SIZE=0x100 --config_def _HEAP_SIZE=0x100 --entry
+#        __iar_program_start --debug_lib)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__SystemLibrary            = DLib
+__code_model               = medium_or_large
+__core                     = stm8
+__data_model               = medium
+__dlib_file_descriptor     = 0
+__dlib_full_locale_support = 0
+__rt_version               = 4
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x000000-0x0000ff] { rw section .vregs };
+"A1":  place at end of [0x000000-0x0007ff] { block CSTACK };
+"P2":  place in [from 0x000000 to 0x0007ff] {
+          block HEAP, rw section __DLIB_PERTHREAD, rw section .far.bss,
+          rw section .far.data, rw section .far.noinit,
+          rw section .far_func.textrw, rw section .huge.bss,
+          rw section .huge.data, rw section .huge.noinit,
+          rw section .huge_func.textrw, rw section .iar.dynexit,
+          rw section .near.bss, rw section .near.data, rw section .near.noinit,
+          rw section .near_func.textrw };
+"A2":  place at start of [0x008000-0x00ffff] { block INTVEC };
+"P3":  place in [from 0x008000 to 0x00ffff] {
+          ro section __DLIB_PERTHREAD_init, ro section .far.data_init,
+          ro section .far_func.textrw_init, ro section .huge.data_init,
+          ro section .huge_func.textrw_init, ro section .iar.init_table,
+          ro section .init_array, ro section .near.data_init,
+          ro section .near.rodata, ro section .near_func.text,
+          ro section .near_func.textrw_init, ro section .tiny.data_init,
+          ro section .tiny.rodata_init };
+"P4":  place in [from 0x008000 to 0x00ffff] {
+          ro section .far.rodata, ro section .far_func.text };
+"P5":  place in [from 0x008000 to 0x00ffff] {
+          ro section .huge.rodata, ro section .huge_func.text };
+do not initialize {
+   rw section .eeprom.noinit, rw section .far.noinit, rw section .huge.noinit,
+   rw section .near.noinit, rw section .tiny.noinit, rw section .vregs };
+initialize by copy {
+   rw section .far.bss, rw section .far.data, rw section .far_func.textrw,
+   rw section .huge.bss, rw section .huge.data, rw section .huge_func.textrw,
+   rw section .iar.dynexit, rw section .near.bss, rw section .near.data,
+   rw section .near_func.textrw, rw section .tiny.bss, rw section .tiny.data,
+   ro section .tiny.rodata };
+
+  Section            Kind      Address    Size  Object
+  -------            ----      -------    ----  ------
+"A0":                                     0x10
+  .vregs             uninit   0x000000    0x10  vregs.o [4]
+                            - 0x000010    0x10
+
+"P2":                                    0x303
+  P2-1                        0x000010   0x303  <Init block>
+    .near.data       inited   0x000010    0x8d  disp.o [1]
+    .near.data       inited   0x00009d    0x68  global.o [1]
+    .near.data       inited   0x000105    0x7c  global.o [1]
+    .near.data       inited   0x000181    0x7c  global.o [1]
+    .near.data       inited   0x0001fd   0x114  global.o [1]
+    .near.bss        inited   0x000311     0x2  interrupt.o [1]
+                            - 0x000313   0x303
+
+"A1":                                    0x100
+  CSTACK                      0x000700   0x100  <Block>
+    CSTACK           uninit   0x000700   0x100  <Block tail>
+                            - 0x000800   0x100
+
+Absolute sections, part 1 of 11:           0x4
+  .near.noinit       uninit   0x005001     0x1  interrupt.o [1]
+  .near.noinit       uninit   0x005002     0x1  keys.o [1]
+  .near.noinit       uninit   0x005003     0x1  keys.o [1]
+  .near.noinit       uninit   0x005004     0x1  keys.o [1]
+                            - 0x005005     0x4
+
+Absolute sections, part 2 of 11:           0x1
+  .near.noinit       uninit   0x005006     0x1  interrupt.o [1]
+                            - 0x005007     0x1
+
+Absolute sections, part 3 of 11:           0x4
+  .near.noinit       uninit   0x00500b     0x1  interrupt.o [1]
+  .near.noinit       uninit   0x00500c     0x1  keys.o [1]
+  .near.noinit       uninit   0x00500d     0x1  keys.o [1]
+  .near.noinit       uninit   0x00500e     0x1  keys.o [1]
+                            - 0x00500f     0x4
+
+Absolute sections, part 4 of 11:           0x2
+  .near.noinit       uninit   0x005011     0x1  tim2.o [1]
+  .near.noinit       uninit   0x005012     0x1  tim2.o [1]
+                            - 0x005013     0x2
+
+Absolute sections, part 5 of 11:           0x1
+  .near.noinit       uninit   0x005014     0x1  oled.o [1]
+                            - 0x005015     0x1
+
+Absolute sections, part 6 of 11:           0x2
+  .near.noinit       uninit   0x005016     0x1  oled.o [1]
+  .near.noinit       uninit   0x005017     0x1  oled.o [1]
+                            - 0x005018     0x2
+
+Absolute sections, part 7 of 11:           0x1
+  .near.noinit       uninit   0x0050a0     0x1  main.o [1]
+                            - 0x0050a1     0x1
+
+Absolute sections, part 8 of 11:           0x1
+  .near.noinit       uninit   0x005300     0x1  tone.o [1]
+                            - 0x005301     0x1
+
+Absolute sections, part 9 of 11:           0x1
+  .near.noinit       uninit   0x005305     0x1  tim2.o [1]
+                            - 0x005306     0x1
+
+Absolute sections, part 10 of 11:          0x1
+  .near.noinit       uninit   0x005308     0x1  tim2.o [1]
+                            - 0x005309     0x1
+
+Absolute sections, part 11 of 11:          0x4
+  .near.noinit       uninit   0x00530d     0x1  tone.o [1]
+  .near.noinit       uninit   0x00530e     0x1  tone.o [1]
+  .near.noinit       uninit   0x00530f     0x1  tim2.o [1]
+  .near.noinit       uninit   0x005310     0x1  tim2.o [1]
+                            - 0x005311     0x4
+
+"A2":                                     0x80
+  INTVEC                      0x008000    0x80  <Block>
+    .intvec          const    0x008000    0x80  interrupt.o [4]
+                            - 0x008080    0x80
+
+"P3-P5":                                0x1582
+  .near.rodata       const    0x008080   0x5f0  oled.o [1]
+  .huge_func.text    ro code  0x008670   0x38d  oled.o [1]
+  Initializer bytes  const    0x0089fd   0x303  <for P2-1>
+  .huge_func.text    ro code  0x008d00   0x1df  interrupt.o [1]
+  .huge_func.text    ro code  0x008edf   0x148  interrupt.o [1]
+  .far_func.text     ro code  0x009027    0x96  vreg_util.o [4]
+  .huge_func.text    ro code  0x0090bd    0x68  interrupt.o [1]
+  .huge_func.text    ro code  0x009125    0x5c  tone.o [1]
+  .huge_func.text    ro code  0x009181    0x3e  disp.o [1]
+  .huge_func.text    ro code  0x0091bf    0x39  main.o [1]
+  .huge_func.text    ro code  0x0091f8    0x36  disp.o [1]
+  .huge_func.text    ro code  0x00922e    0x2f  tone.o [1]
+  .far_func.text     ro code  0x00925d    0x28  init_small.o [4]
+  .huge_func.text    ro code  0x009285    0x24  disp.o [1]
+  .near.rodata       const    0x0092a9    0x22  global.o [1]
+  .iar.init_table    const    0x0092cb     0xb  - Linker created -
+  .far_func.text     ro code  0x0092d6    0x1e  short.o [4]
+  .far_func.text     ro code  0x0092f4    0x1e  init.o [4]
+  .huge_func.text    ro code  0x009312    0x1d  tim2.o [1]
+  .huge_func.text    ro code  0x00932f    0x19  keys.o [1]
+  .huge_func.text    ro code  0x009348    0x19  keys.o [1]
+  .far_func.text     ro code  0x009361    0x17  cstartup.o [4]
+  .huge_func.text    ro code  0x009378    0x17  delay.o [1]
+  .far_func.text     ro code  0x00938f    0x16  __dbg_xxexit.o [3]
+  .huge_func.text    ro code  0x0093a5    0x16  tone.o [1]
+  .huge_func.text    ro code  0x0093bb    0x15  disp.o [1]
+  .huge_func.text    ro code  0x0093d0    0x15  disp.o [1]
+  .huge_func.text    ro code  0x0093e5    0x15  disp.o [1]
+  .huge_func.text    ro code  0x0093fa    0x15  disp.o [1]
+  .huge_func.text    ro code  0x00940f    0x15  disp.o [1]
+  .huge_func.text    ro code  0x009424    0x15  disp.o [1]
+  .huge_func.text    ro code  0x009439    0x15  disp.o [1]
+  .huge_func.text    ro code  0x00944e    0x15  disp.o [1]
+  .huge_func.text    ro code  0x009463    0x15  disp.o [1]
+  .huge_func.text    ro code  0x009478    0x15  disp.o [1]
+  .huge_func.text    ro code  0x00948d    0x15  disp.o [1]
+  .huge_func.text    ro code  0x0094a2    0x15  disp.o [1]
+  .huge_func.text    ro code  0x0094b7    0x15  disp.o [1]
+  .huge_func.text    ro code  0x0094cc    0x15  disp.o [1]
+  .huge_func.text    ro code  0x0094e1    0x11  oled.o [1]
+  .near.rodata       const    0x0094f2    0x11  disp.o [1]
+  .near.rodata       const    0x009503    0x11  disp.o [1]
+  .huge_func.text    ro code  0x009514    0x10  disp.o [1]
+  .huge_func.text    ro code  0x009524    0x10  disp.o [1]
+  .huge_func.text    ro code  0x009534    0x10  disp.o [1]
+  .huge_func.text    ro code  0x009544    0x10  disp.o [1]
+  .near.rodata       const    0x009554    0x10  disp.o [1]
+  .near.rodata       const    0x009564    0x10  disp.o [1]
+  .far_func.text     ro code  0x009574     0xe  far_util.o [4]
+  .near.rodata       const    0x009582     0xc  disp.o [1]
+  .near.rodata       const    0x00958e     0xb  disp.o [1]
+  .near.rodata       const    0x009599     0xb  disp.o [1]
+  .near.rodata       const    0x0095a4     0x9  disp.o [1]
+  .far_func.text     ro code  0x0095ad     0x6  char.o [4]
+  .far_func.text     ro code  0x0095b3     0x6  cexit.o [4]
+  .near.rodata       const    0x0095b9     0x6  disp.o [1]
+  .near.rodata       const    0x0095bf     0x5  disp.o [1]
+  .near.rodata       const    0x0095c4     0x5  disp.o [1]
+  .far_func.text     ro code  0x0095c9     0x4  interrupt.o [4]
+  .far_func.text     ro code  0x0095cd     0x4  exit.o [4]
+  .far_func.text     ro code  0x0095d1     0x3  low_level_init.o [4]
+  .far_func.text     ro code  0x0095d4     0x3  unhandled_exception.o [4]
+  .near.rodata       const    0x0095d7     0x3  disp.o [1]
+  .near.rodata       const    0x0095da     0x3  disp.o [1]
+  .near.rodata       const    0x0095dd     0x3  disp.o [1]
+  .near.rodata       const    0x0095e0     0x3  disp.o [1]
+  .near.rodata       const    0x0095e3     0x3  disp.o [1]
+  .near.rodata       const    0x0095e6     0x3  disp.o [1]
+  .near.rodata       const    0x0095e9     0x3  disp.o [1]
+  .near.rodata       const    0x0095ec     0x3  disp.o [1]
+  .near.rodata       const    0x0095ef     0x3  disp.o [1]
+  .near.rodata       const    0x0095f2     0x3  disp.o [1]
+  .near.rodata       const    0x0095f5     0x3  disp.o [1]
+  .near.rodata       const    0x0095f8     0x3  disp.o [1]
+  .near.rodata       const    0x0095fb     0x3  disp.o [1]
+  .near.rodata       const    0x0095fe     0x3  disp.o [1]
+  .far_func.text     ro code  0x009601     0x1  __dbg_break.o [3]
+                            - 0x009602  0x1582
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address   Size
+          -------   ----
+Copy (__iar_copy_init2)
+    1 source range, total size 0x303:
+          0x0089fd  0x303
+    1 destination range, total size 0x303:
+          0x000010  0x303
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data  rw data
+                                                       (abs)
+    ------                 -------  -------  -------  -------
+F:\STM8\electron\electoneProject\Debug\Obj: [1]
+    delay.o                     23
+    disp.o                     510      308      141
+    global.o                            662      628
+    interrupt.o                911        2        2        3
+    keys.o                      50                          6
+    main.o                      57                          1
+    oled.o                     926    1 520                 3
+    tim2.o                      29                          6
+    tone.o                     161                          3
+    ---------------------------------------------------------
+    Total:                   2 667    2 492      771       22
+
+command line: [2]
+    ---------------------------------------------------------
+    Total:
+
+dbgstm8mmd.a: [3]
+    __dbg_break.o                1
+    __dbg_xxexit.o              22
+    ---------------------------------------------------------
+    Total:                      23
+
+dlstm8mmn.a: [4]
+    cexit.o                      6
+    char.o                       6
+    cstartup.o                  23
+    exit.o                       4
+    far_util.o                  14
+    init.o                      30
+    init_small.o                40
+    interrupt.o                  4      128
+    low_level_init.o             3
+    short.o                     30
+    unhandled_exception.o        3
+    vreg_util.o                150
+    vregs.o                                       16
+    ---------------------------------------------------------
+    Total:                     313      128       16
+
+    Linker created                       11      256
+-------------------------------------------------------------
+    Grand Total:             3 003    2 631    1 043       22
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address   Size  Type      Object
+-----                    -------   ----  ----      ------
+.iar.init_table$$Base   0x0092cb          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x0092d6          --   Gb  - Linker created -
+?b0                     0x000000         Data  Gb  vregs.o [4]
+?b1                     0x000001         Data  Gb  vregs.o [4]
+?b10                    0x00000a         Data  Gb  vregs.o [4]
+?b11                    0x00000b         Data  Gb  vregs.o [4]
+?b12                    0x00000c         Data  Gb  vregs.o [4]
+?b13                    0x00000d         Data  Gb  vregs.o [4]
+?b14                    0x00000e         Data  Gb  vregs.o [4]
+?b15                    0x00000f         Data  Gb  vregs.o [4]
+?b2                     0x000002         Data  Gb  vregs.o [4]
+?b3                     0x000003         Data  Gb  vregs.o [4]
+?b4                     0x000004         Data  Gb  vregs.o [4]
+?b5                     0x000005         Data  Gb  vregs.o [4]
+?b6                     0x000006         Data  Gb  vregs.o [4]
+?b7                     0x000007         Data  Gb  vregs.o [4]
+?b8                     0x000008         Data  Gb  vregs.o [4]
+?b9                     0x000009         Data  Gb  vregs.o [4]
+?e0                     0x000001         Data  Gb  vregs.o [4]
+?e1                     0x000005         Data  Gb  vregs.o [4]
+?e2                     0x000009         Data  Gb  vregs.o [4]
+?e3                     0x00000d         Data  Gb  vregs.o [4]
+?epilogue_l2            0x0090b3         Code  Gb  vreg_util.o [4]
+?epilogue_w4            0x0090b8         Code  Gb  vreg_util.o [4]
+?l0                     0x000000         Data  Gb  vregs.o [4]
+?l1                     0x000004         Data  Gb  vregs.o [4]
+?l2                     0x000008         Data  Gb  vregs.o [4]
+?l3                     0x00000c         Data  Gb  vregs.o [4]
+?load24_e1_0x           0x009574         Code  Gb  far_util.o [4]
+?mul16_x_x_w0           0x0092d6         Code  Gb  short.o [4]
+?pop_l0                 0x009086         Code  Gb  vreg_util.o [4]
+?pop_l1                 0x009091         Code  Gb  vreg_util.o [4]
+?pop_l2                 0x00909c         Code  Gb  vreg_util.o [4]
+?pop_w4                 0x009043         Code  Gb  vreg_util.o [4]
+?push_l0                0x009056         Code  Gb  vreg_util.o [4]
+?push_l1                0x00905b         Code  Gb  vreg_util.o [4]
+?push_l2                0x009060         Code  Gb  vreg_util.o [4]
+?push_w4                0x009027         Code  Gb  vreg_util.o [4]
+?srl8_a_a_5             0x0095ae         Code  Gb  char.o [4]
+?srl8_a_a_6             0x0095ad         Code  Gb  char.o [4]
+?w0                     0x000000         Data  Gb  vregs.o [4]
+?w1                     0x000002         Data  Gb  vregs.o [4]
+?w2                     0x000004         Data  Gb  vregs.o [4]
+?w3                     0x000006         Data  Gb  vregs.o [4]
+?w4                     0x000008         Data  Gb  vregs.o [4]
+?w5                     0x00000a         Data  Gb  vregs.o [4]
+?w6                     0x00000c         Data  Gb  vregs.o [4]
+?w7                     0x00000e         Data  Gb  vregs.o [4]
+Birthday                0x00009d   0x68  Data  Gb  global.o [1]
+CSTACK$$Base            0x000700          --   Gb  - Linker created -
+CSTACK$$Limit           0x000800          --   Gb  - Linker created -
+Christmas               0x000105   0x7c  Data  Gb  global.o [1]
+DisplayBirthday         0x009514   0x10  Code  Gb  disp.o [1]
+DisplayChristmas        0x009524   0x10  Code  Gb  disp.o [1]
+DisplayJoy              0x009544   0x10  Code  Gb  disp.o [1]
+DisplayMain             0x009181   0x3e  Code  Gb  disp.o [1]
+DisplayNewyear          0x009534   0x10  Code  Gb  disp.o [1]
+DisplayPlay             0x009285   0x24  Code  Gb  disp.o [1]
+DisplaySong             0x0091f8   0x36  Code  Gb  disp.o [1]
+Display_A4              0x009424   0x15  Code  Gb  disp.o [1]
+Display_A5              0x0094b7   0x15  Code  Gb  disp.o [1]
+Display_B4              0x009439   0x15  Code  Gb  disp.o [1]
+Display_B5              0x0094cc   0x15  Code  Gb  disp.o [1]
+Display_C4              0x0093bb   0x15  Code  Gb  disp.o [1]
+Display_C5              0x00944e   0x15  Code  Gb  disp.o [1]
+Display_D4              0x0093d0   0x15  Code  Gb  disp.o [1]
+Display_D5              0x009463   0x15  Code  Gb  disp.o [1]
+Display_E4              0x0093e5   0x15  Code  Gb  disp.o [1]
+Display_E5              0x00948d   0x15  Code  Gb  disp.o [1]
+Display_F4              0x0093fa   0x15  Code  Gb  disp.o [1]
+Display_F5              0x009478   0x15  Code  Gb  disp.o [1]
+Display_G4              0x00940f   0x15  Code  Gb  disp.o [1]
+Display_G5              0x0094a2   0x15  Code  Gb  disp.o [1]
+EXTI_PORTE_IRQHandler0  0x0090bd   0x68  Code  Gb  interrupt.o [1]
+EXTI_PORTE_IRQHandler2  0x008edf  0x148  Code  Gb  interrupt.o [1]
+EXTI_PORTE_IRQHandler3  0x008d00  0x1df  Code  Gb  interrupt.o [1]
+F8X16                   0x008080  0x5f0  Data  Gb  oled.o [1]
+IIC_Start               0x0094e1   0x11  Code  Gb  oled.o [1]
+IIC_Stop                0x008670    0xd  Code  Gb  oled.o [1]
+IIC_Wait_Ack            0x00867d    0x9  Code  Gb  oled.o [1]
+INTVEC$$Base            0x008000          --   Gb  - Linker created -
+INTVEC$$Limit           0x008080          --   Gb  - Linker created -
+Joy                     0x0001fd  0x114  Data  Gb  global.o [1]
+KeysMode_Init           0x009348   0x19  Code  Gb  keys.o [1]
+Keys_Init               0x00932f   0x19  Code  Gb  keys.o [1]
+Newyear                 0x000181   0x7c  Data  Gb  global.o [1]
+OLED_Clear              0x008750   0x3b  Code  Gb  oled.o [1]
+OLED_Display_On         0x008738   0x18  Code  Gb  oled.o [1]
+OLED_DrawBMP            0x00886e   0x6f  Code  Gb  oled.o [1]
+OLED_Init               0x0088dd  0x120  Code  Gb  oled.o [1]
+OLED_Set_Pos            0x008713   0x25  Code  Gb  oled.o [1]
+OLED_ShowChar           0x00878b   0x97  Code  Gb  oled.o [1]
+OLED_ShowString         0x008822   0x4c  Code  Gb  oled.o [1]
+OLED_WR_Byte            0x008707    0xc  Code  Gb  oled.o [1]
+Region$$Table$$Base     0x0092cb          --   Gb  - Linker created -
+Region$$Table$$Limit    0x0092d6          --   Gb  - Linker created -
+TIM2_ARRH               0x00530d    0x1  Data  Gb  tone.o [1]
+TIM2_ARRL               0x00530e    0x1  Data  Gb  tone.o [1]
+TIM2_CCR1H              0x00530f    0x1  Data  Gb  tim2.o [1]
+TIM2_CCR1L              0x005310    0x1  Data  Gb  tim2.o [1]
+TIM2_OC1_Init           0x009312   0x1d  Code  Gb  tim2.o [1]
+Write_IIC_Byte          0x008686   0x32  Code  Gb  oled.o [1]
+Write_IIC_Command       0x0086b8   0x27  Code  Gb  oled.o [1]
+Write_IIC_Data          0x0086df   0x28  Code  Gb  oled.o [1]
+_A_EXTI_CR1             0x0050a0    0x1  Data  Gb  main.o [1]
+_A_PA_CR1               0x005003    0x1  Data  Gb  keys.o [1]
+_A_PA_CR2               0x005004    0x1  Data  Gb  keys.o [1]
+_A_PA_DDR               0x005002    0x1  Data  Gb  keys.o [1]
+_A_PA_IDR               0x005001    0x1  Data  Gb  interrupt.o [1]
+_A_PB_IDR               0x005006    0x1  Data  Gb  interrupt.o [1]
+_A_PC_CR1               0x00500d    0x1  Data  Gb  keys.o [1]
+_A_PC_CR2               0x00500e    0x1  Data  Gb  keys.o [1]
+_A_PC_DDR               0x00500c    0x1  Data  Gb  keys.o [1]
+_A_PC_IDR               0x00500b    0x1  Data  Gb  interrupt.o [1]
+_A_PD_CR1               0x005012    0x1  Data  Gb  tim2.o [1]
+_A_PD_DDR               0x005011    0x1  Data  Gb  tim2.o [1]
+_A_PE_CR1               0x005017    0x1  Data  Gb  oled.o [1]
+_A_PE_DDR               0x005016    0x1  Data  Gb  oled.o [1]
+_A_PE_ODR               0x005014    0x1  Data  Gb  oled.o [1]
+_A_TIM2_CCER1           0x005308    0x1  Data  Gb  tim2.o [1]
+_A_TIM2_CCMR1           0x005305    0x1  Data  Gb  tim2.o [1]
+_A_TIM2_CR1             0x005300    0x1  Data  Gb  tone.o [1]
+__DebugBreak            0x009601    0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x00938f   0x16  Code  Gb  __dbg_xxexit.o [3]
+__iar_copy_init2        0x00925d         Code  Gb  init_small.o [4]
+__iar_data_init2        0x0092f4   0x1e  Code  Gb  init.o [4]
+__iar_program_start     0x009361         Code  Gb  cstartup.o [4]
+__iar_unhandled_exception
+                        0x0095d4         Code  Gb  unhandled_exception.o [4]
+__intvec                0x008000         Data  Gb  interrupt.o [4]
+__low_level_init        0x0095d1    0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x0095b3         Code  Gb  cexit.o [4]
+_interrupt_5            0x0090bd         Code  Gb  interrupt.o [1]
+_interrupt_6            0x008edf         Code  Gb  interrupt.o [1]
+_interrupt_7            0x008d00         Code  Gb  interrupt.o [1]
+delay_ms                0x009378   0x17  Code  Gb  delay.o [1]
+exit                    0x0095cd    0x4  Code  Gb  exit.o [4]
+keyboard                0x000010   0x8d  Data  Gb  disp.o [1]
+main                    0x0091bf   0x39  Code  Gb  main.o [1]
+note                    0x0093a5   0x16  Code  Gb  tone.o [1]
+noteRhythms             0x00922e   0x2f  Code  Gb  tone.o [1]
+notes                   0x0092a9   0x22  Data  Gb  global.o [1]
+song                    0x009125   0x5c  Code  Gb  tone.o [1]
+status                  0x000311    0x2  Data  Gb  interrupt.o [1]
+
+
+[1] = F:\STM8\electron\electoneProject\Debug\Obj
+[2] = command line
+[3] = dbgstm8mmd.a
+[4] = dlstm8mmn.a
+
+  3 003 bytes of readonly  code memory
+  2 631 bytes of readonly  data memory
+  1 043 bytes of readwrite data memory (+ 22 absolute)
+
+Errors: none
+Warnings: none
