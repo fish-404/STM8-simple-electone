@@ -134,7 +134,7 @@ __interrupt void EXTI_PORTE_IRQHandler3()
 
 /* 
  * PORTB 琴键处理函数：
- *      PB0- PC6 分别为中央C高一个八度起的一个八度区间琴键
+ *      PB0- PB6 分别为中央C高一个八度起的一个八度区间琴键
  */
 #pragma vector =  6 // 端口B外部中断向量号为4，+2
 __interrupt void EXTI_PORTE_IRQHandler2(void)
