@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>2</fileVersion>
-    <fileChecksum>202068932</fileChecksum>
+    <fileChecksum>3896048259</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -237,7 +237,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 1 19 7 25 0 46</file>
+                    <file> 51</file>
                 </tool>
             </inputs>
         </file>
@@ -260,7 +260,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 4 25 51 6 0 5 19 8</file>
+                    <file> 5 0 25 4 51 19 6</file>
                 </tool>
             </inputs>
         </file>
@@ -325,6 +325,10 @@
                 </tool>
             </inputs>
         </file>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
     </configuration>
     <configuration>
         <name>Release</name>

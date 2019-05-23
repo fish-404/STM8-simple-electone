@@ -1636,9 +1636,6 @@
             <name>$PROJ_DIR$\src\disp.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\src\global.c</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\src\interrupt.c</name>
         </file>
         <file>
@@ -1646,6 +1643,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\src\oled.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\song.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\src\tim2.c</name>
