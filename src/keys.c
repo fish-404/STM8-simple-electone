@@ -13,9 +13,9 @@ void Keys_Init()
   PC_CR1 |= 0XFE;       // PC1-PC7为上拉输入
   PC_CR2 |= 0XFE;       // PC1-PC7使能外部中断
   
-  PB_DDR &= 0X80;       // PB0-PB6为输入模式
-  PB_CR1 |= 0X7F;       // PB0-PB6为上拉输入
-  PB_CR2 |= 0X7F;       // PB0-PB6使能外部中断
+  PB_DDR = 0X00;       // PB0-PB7为输入模式
+  PB_CR1 = 0XFF;       // PB0-PB7为上拉输入
+  PB_CR2 = 0XFF;       // PB0-PB7使能外部中断
 }
 
 /*

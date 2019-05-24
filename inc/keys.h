@@ -21,7 +21,7 @@
 #define KEY_F5 PB_IDR_IDR3
 #define KEY_G5 PB_IDR_IDR4
 #define KEY_A5 PB_IDR_IDR5
-#define KEY_B5 PB_IDR_IDR6
+#define KEY_B5 PB_IDR_IDR7
 
 void Keys_Init();       // 琴键初始化函数
 void KeysMode_Init();   // 控制按键初始化函数

@@ -109,21 +109,21 @@ __interrupt void EXTI_PORTE_IRQHandler3()
       DisplaySong();
     }
   }
-  else if (KEY_G4 == 0) { 
+  else if (KEY_G4 == 0 && status == PLAY) { 
     note(G4);
     Display_G4();
     AUDIO_ON;
     while (KEY_G4 == 0);
     AUDIO_OFF;
   }
-  else if (KEY_A4 == 0) { 
+  else if (KEY_A4 == 0 && status == PLAY) { 
     note(A4);
     Display_A4();
     AUDIO_ON; 
     while (KEY_A4 == 0);
     AUDIO_OFF;
   }
-  else if (KEY_B4 == 0) {
+  else if (KEY_B4 == 0 && status == PLAY) {
     note(B4);
     Display_B4();
     AUDIO_ON;
@@ -139,49 +139,49 @@ __interrupt void EXTI_PORTE_IRQHandler3()
 #pragma vector =  6 // 端口B外部中断向量号为4，+2
 __interrupt void EXTI_PORTE_IRQHandler2(void)
 {
-  if (KEY_C5 == 0) { 
+  if (KEY_C5 == 0 && status == PLAY) { 
     note(C5);
     Display_C5();
     AUDIO_ON;
     while (KEY_C5 == 0);
     AUDIO_OFF;
   }
-  else if (KEY_D5 == 0) { 
+  else if (KEY_D5 == 0 && status == PLAY) { 
       note(D5);
       Display_D5();
       AUDIO_ON;
       while (KEY_D5 == 0);
       AUDIO_OFF;
   }
-  else if (KEY_E5 == 0) { 
+  else if (KEY_E5 == 0 && status == PLAY) { 
     note(E5);
     Display_E5();
     AUDIO_ON;
     while (KEY_E5 == 0);
     AUDIO_OFF;
   }
-  else if (KEY_F5 == 0) { 
+  else if (KEY_F5 == 0 && status == PLAY) { 
     note(F5);
     Display_F5();
     AUDIO_ON;
     while (KEY_F5 == 0);
     AUDIO_OFF;
   }
-  else if (KEY_G5 == 0) { 
+  else if (KEY_G5 == 0 && status == PLAY) { 
     note(G5);
     Display_G5();
     AUDIO_ON;
     while (KEY_G5 == 0);
     AUDIO_OFF;
   }
-  else if (KEY_A5 == 0) { 
+  else if (KEY_A5 == 0 && status == PLAY) { 
     note(A5);
     Display_A5();
     AUDIO_ON; 
     while (KEY_A5 == 0);
     AUDIO_OFF;
   }
-  else if (KEY_B5 == 0) {
+  else if (KEY_B5 == 0 && status == PLAY) {
     note(B5);
     Display_B5();
     AUDIO_ON;

@@ -8,8 +8,8 @@ void DisplayMain()
   OLED_Clear(); // 清屏
   OLED_ShowString(32, 0, "ELECTONE");
   OLED_DrawBMP(40, 2, 87, 5, keyboard);
-  OLED_ShowString(16, 6, "Song");
-  OLED_ShowString(80, 6, "Play");
+  OLED_ShowString(16, 6, "Play");
+  OLED_ShowString(80, 6, "Song");
 }
 
 /* 演奏界面显示函数 */
