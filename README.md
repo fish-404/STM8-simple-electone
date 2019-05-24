@@ -10,7 +10,7 @@
   * 声音输出：
     * TIM2_OC1 - PD4 输出不同频率的方波
   * OLED 部分：
-    * VCC - 5V
+    * VCC - 3.3V
     * SCL - PE1
     * SDA - PE2
   * 控制按键部分：
