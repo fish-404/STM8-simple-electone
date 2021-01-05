@@ -1,28 +1,28 @@
 #include "iostm8s105c6.h"
-#include "intrinsics.h" // ×ÜÖĞ¶ÏÍ·ÎÄ¼ş
+#include "intrinsics.h" // æ€»ä¸­æ–­å¤´æ–‡ä»¶
 #include "oled.h"
 #include "keys.h"
 #include "tim2.h"
-#include "interrupt.h"
+//#include "interrupt.h"
 #include "disp.h"
 
 void main()
 {
-  OLED_Init();          // OLED³õÊ¼»¯
-  Keys_Init();          // ÇÙ¼ü³õÊ¼»¯
-  KeysMode_Init();      // ¿ØÖÆ°´¼ü³õÊ¼»¯
+  OLED_Init();          // OLEDåˆå§‹åŒ–
+  Keys_Init();          // ç´é”®åˆå§‹åŒ–
+  KeysMode_Init();      // æ§åˆ¶æŒ‰é”®åˆå§‹åŒ–
   
-  OLED_Display_On();    // OLED¿ªÆôÏÔÊ¾
-  DisplayMain();        // ÏÔÊ¾Ö÷½çÃæ
+  OLED_Display_On();    // OLEDå¼€å¯æ˜¾ç¤º
+  DisplayMain();        // æ˜¾ç¤ºä¸»ç•Œé¢
   
   TIM2_OC1_Init();
   
-  /* PORT C PORTB PORTA ÖĞ¶Ï´¥·¢Î»ÖÃÎª 10 £¬½öÏÂ½µÑØ´¥·¢ */
+  /* PORT C PORTB PORTA ä¸­æ–­è§¦å‘ä½ç½®ä¸º 10 ï¼Œä»…ä¸‹é™æ²¿è§¦å‘ */
   EXTI_CR1_PAIS = 2;
   EXTI_CR1_PBIS = 2;
   EXTI_CR1_PCIS = 2;
   
-  __enable_interrupt(); // ¿ªÆô×ÜÖĞ¶Ï
+  __enable_interrupt(); // å¼€å¯æ€»ä¸­æ–­
     
   while(1){
     
